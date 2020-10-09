@@ -1,5 +1,12 @@
 import random
 
+def printTeam(players):
+    for i, player in enumerate(players):
+        if i != len(players) - 1:
+            print(player, end = ", ")
+        else:
+            print(player)
+
 players = []
 teamOne = []
 teamTwo = []
@@ -14,9 +21,12 @@ while len(teamOne) != int(len(players)/2):
         teamOne.append(players[rand])
 
 
-for i in range(6):
+for i in range(len(players)):
     if players[i] not in teamOne:
         teamTwo.append(players[i])
 
-print(f"Team One: {teamOne[0]}, {teamOne[1]}, {teamOne[2]}")
-print(f"Team Two: {teamTwo[0]}, {teamTwo[1]}, {teamTwo[2]}")
+print(f"Team One: ", end = "")
+printTeam(teamOne)
+
+print(f"Team Two: ", end = "")
+printTeam(teamTwo)

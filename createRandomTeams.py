@@ -14,6 +14,7 @@ teamTwo = []
 print("Please enter all player names, seperated by a comma and a space (i.e: Joe, Chris, Bob)")
 names = input("> ")
 players = names.split(', ')
+random.seed()
 
 while len(teamOne) != int(len(players)/2):
     rand = random.randint(0, len(players) - 1)
